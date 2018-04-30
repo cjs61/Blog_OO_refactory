@@ -4,7 +4,7 @@ namespace App;
 class App{
 
 
-	private static $database;
+	//private static $database;
 	public $title = "Blog photo";
 	private static $_instance;
 	
@@ -14,6 +14,6 @@ class App{
 			self::$_instance = new App();
 
 		}
-				return self::$_intance;
+				return self::$_instance;
 	}
 }

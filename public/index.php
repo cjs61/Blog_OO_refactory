@@ -5,5 +5,10 @@ session_start();
 require '../app/Autoloader.php';
 App\Autoloader::register();
 
+$app = App\App::getInstance();
+$app->title = "titre de test";
 
-var_dump(App\Config::getInstance()->get('db_user'));
+$app2 = App\App::getInstance();
+echo $app2->title;
+
+
