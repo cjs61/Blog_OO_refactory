@@ -5,8 +5,7 @@ session_start();
 require '../app/Autoloader.php';
 App\Autoloader::register();
 
-$posts = App\App::getTable('Posts');
-
-var_dump($posts);
-
+var_dump(App\App::getTable('Posts'));
+var_dump(App\App::getTable('Users'));
+var_dump(App\App::getTable('Categories'));
 
