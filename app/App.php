@@ -4,8 +4,9 @@ namespace App;
 class App{
 
 
-	//private static $database;
+
 	public $title = "Blog photo";
+	private $db_instance;
 	private static $_instance;
 	
 	
@@ -20,5 +21,13 @@ class App{
 		$class_name = '\\App\\Table\\' . ucfirst($name) . 'Table';
 		return new $class_name();
 
+	}
+	public function getDb(){
+		$config = Config::getInstance();
+		if(is_null($this->db_instance)){
+			$this->db_instance = new Database($config->get('db_name'), $config->get('db_user'), $config->get('db_pass'), $config->get('db_host'));
+
+		}
+		return $this->db_instance;
 	}
 }
