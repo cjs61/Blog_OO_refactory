@@ -16,4 +16,9 @@ class App{
 		}
 				return self::$_instance;
 	}
+	public static function getTable($name){
+		$class_name = '\\App\\Table\\' . ucfirst($name) . 'Table';
+		return new $class_name();
+
+	}
 }

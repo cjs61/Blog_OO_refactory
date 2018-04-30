@@ -5,10 +5,8 @@ session_start();
 require '../app/Autoloader.php';
 App\Autoloader::register();
 
-$app = App\App::getInstance();
-$app->title = "titre de test";
+$posts = App\App::getTable('Posts');
 
-$app2 = App\App::getInstance();
-echo $app2->title;
+var_dump($posts);
 
 
