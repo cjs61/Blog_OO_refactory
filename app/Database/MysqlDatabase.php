@@ -1,10 +1,10 @@
 <?php
-namespace App;
+namespace App\Database;
 
 use \PDO;
 
 
-class Database{
+class MysqlDatabase extends Database {
 	private $db_name;
 	private $db_user;
 	private $db_pass;
