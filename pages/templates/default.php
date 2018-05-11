@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
- <title><?= App\App::getTitle(); ?></title>
+ <title><?= App::getInstance()->title; ?></title>
 
     <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
