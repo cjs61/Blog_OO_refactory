@@ -1,6 +1,9 @@
 <?php
 namespace App\Table;
 
+use Core\Table\Table;
 
-class CategoriesTable extends Table {
+
+class CategoriesTable extends Table{
+	protected $table = "catégories lol";
 }
