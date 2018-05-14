@@ -21,6 +21,10 @@ class Table {
 
 	}
 
+	public function find($id){
+		return $this->query("SELECT * FROM {$this->table} WHERE id = ?", [$id], true);
+	}
+
 	public function query($statement, $attributes = null, $one = false){
 		if($attributes){
 			return $this->db->prepare($statement, $attributes, str_replace('Table', 'Entity', get_class($this)), $one);

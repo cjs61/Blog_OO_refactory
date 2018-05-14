@@ -21,7 +21,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Nom du projet</a>
+        <a class="navbar-brand" href="index.php">Nom du projet</a>
       </div>
     </div>
 </nav>
