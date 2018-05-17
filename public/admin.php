@@ -25,6 +25,8 @@ if($page === 'home'){
 	
 }elseif ($page === 'posts.show') {
 	require ROOT . '/pages/admin/posts/show.php';
+}elseif ($page === 'posts.add') {
+	require ROOT . '/pages/admin/posts/add.php';
 }
 
 
