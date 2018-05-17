@@ -81,5 +81,10 @@ public function prepare($statement, $attributes, $class_name = null, $one = fals
 	return $datas;
 }
 
+public function lastInsertId(){
+	return $this->getPDO()->lastInsertId();
+
+}
+
 }
 
