@@ -1,6 +1,21 @@
 <?php
+$postTable = App::getInstance()->getTable('Post');
+if(!empty($_POST)){
+	$result = $postTable->update($_GET['id'], [
+		'titre' => $_POST['titre'],
+		'contenu' => $_POST['contenu']
 
-$form = new \Core\HTML\BootstrapForm($_POST);
+]);
+	if($result){
+		?>
+		<div class="alert alert-success">L'article à bien été ajouté</div>
+		<?php
+	}
+
+}
+$post = $postTable->find($_GET['id']);
+
+$form = new \Core\HTML\BootstrapForm($post);
 ?>
 
 <form method="post">

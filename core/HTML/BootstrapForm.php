@@ -23,4 +23,4 @@ return $this->surround($label . $input);
 		return $this->surround('<button type="submit" class="btn btn-primary">Envoyer</button>');
 	}
 }
- ?>
+ 
