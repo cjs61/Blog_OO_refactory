@@ -7,7 +7,7 @@ class BootstrapForm extends Form
 		return "<div class=\"form-group\">{$html}</div>";
 }
 	
-	public function input($name, $label, $options =[]){
+	public function input($name, $label, $options = []){
 		$type = isset($options['type']) ? $options['type'] : 'text';
 		$label = '<label>' . $label . '</label></br>';
 		if($type === 'textarea'){
@@ -19,7 +19,22 @@ class BootstrapForm extends Form
 			}
 return $this->surround($label . $input);
 	}
-		public function submit(){
+
+	public function select($name, $label, $options){
+		$label = '<label>' . $label . '</label>';
+		$input = '<select class="form-control" name="' . $name . '">';
+		foreach($options as $k => $v){
+			$attributes = '';
+			if($k == $this->getValue($name)){
+				$attributes = 'selected';
+			}
+			$input .= "<option value='$k'$attributes>$v</option>";
+	}
+	$input .= '</select>';
+	return $this->surround($label . $input);
+	}
+		
+	public function submit(){
 		return $this->surround('<button type="submit" class="btn btn-primary">Envoyer</button>');
 	}
 }
