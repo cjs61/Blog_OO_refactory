@@ -8,9 +8,7 @@ if(!empty($_POST)){
 
 ]);
 	if($result){
-		?>
-		<div class="alert alert-success">L'article à bien été ajouté</div>
-		<?php
+		header('Location: admin.php?p=posts.edit&id=' . App::getInstance()->getDb()->lastInsertId());
 	}
 
 }
