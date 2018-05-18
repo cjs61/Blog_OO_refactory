@@ -1,16 +1,5 @@
-<?php
-$app = App::getInstance();
-$post = $app->getTable('Post')->findWithCategory($_GET['id']);
+<h1><?= $article->titre; ?></h1>
 
-if($post === false){
-	$app->notFound();
-}
-$app->title = $post->titre;
+<p><em><?= $article->categorie; ?></em></p>
 
-?>
-
-<h1><?= $post->titre; ?></h1>
-
-<p><em><?= $categorie->titre; ?></em></p>
-
-<p><?= $post->contenu; ?></p>
+<p><?= $article->contenu; ?></p>
