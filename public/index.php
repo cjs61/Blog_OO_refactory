@@ -18,6 +18,8 @@ if($page === 'home'){
 	# code...
 }elseif ($page === 'posts.show') {
 	require ROOT . '/pages/posts/show.php';
+}elseif ($page === 'login') {
+	require ROOT . '/pages/users/login.php';
 }
 
 
